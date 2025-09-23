@@ -89,3 +89,19 @@ Sub Row_UpdateChecksum2 (self As Row, values() As Integer)
         Next
     Next
 End Sub
+
+' --------------------
+' Utilities
+' --------------------
+
+Function ValueFromString (strng As String, start_index As Integer, stop_index As Integer)
+    ValueFromString = Val(Mid$(strng, start_index, stop_index))
+End Function
+
+Function Min (a As Integer, b As Integer)
+    If a < b Then Min = a Else Min = b
+End Function
+
+Function Max (a As Integer, b As Integer)
+    If a > b Then Max = a Else Max = b
+End Function
